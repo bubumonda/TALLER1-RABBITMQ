@@ -1,0 +1,22 @@
+version: '3'
+services:
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    container_name: rabbitmq
+    ports:
+      - '80:80'   # Puerto para el servicio de RabbitMQ
+      - '81:80' # Puerto para la interfaz web de gestión
+
+  publisher:
+    build: .
+    container_name: publisher
+    depends_on:
+      - rabbitmq
+
+ # subscriber:
+  #  build: .
+   # container_name: subscriber
+    #command: ["python", "subscriber.py"]
+   # depends_on:
+    #  - rabbitmq
+
