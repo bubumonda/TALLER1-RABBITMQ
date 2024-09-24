@@ -15,5 +15,5 @@ public class Data  {
 
 
    private long id;	 
-   private String text;
+   private String message;
 }

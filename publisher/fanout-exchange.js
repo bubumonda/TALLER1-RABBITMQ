@@ -56,7 +56,7 @@ async function publisher() {
 
             const message = {
                 id: (Math.floor(Math.random()*1000000)),
-                text: 'Hello world from NODEJS!'
+                message: 'Hello world from NODEJS!'
             }
 
             setTimeout(sendMessageBackOff, delay, connection, channel, message)

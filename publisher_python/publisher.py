@@ -14,11 +14,11 @@ logging.basicConfig(level=logging.INFO)
 # Publicar un mensaje cada 20 segundos
 
 class Message:
-    def __init__(self, id, text):
+    def __init__(self, id, message):
         self.id = id
-        self.text = text
+        self.message= message 
     id: int
-    text: str
+    message: str
 
 while True:
     text = "Hello World FROM PYTHON!"
